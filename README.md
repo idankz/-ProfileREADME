@@ -10,7 +10,7 @@
 [![Zustand](https://img.shields.io/badge/State-Zustand-orange?style=flat-square)](https://github.com/pmndrs/zustand)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-[Live Demo](http://localhost:3000) · [Report Bug](https://github.com/idankuz/profilereadme-dev/issues) · [Request Feature](https://github.com/idankuz/profilereadme-dev/issues)
+[Live Demo](http://localhost:3000) · [Report Bug](https://github.com/idankuz/-ProfileREADME/issues) · [Request Feature](https://github.com/idankuz/-ProfileREADME/issues)
 
 </div>
 
