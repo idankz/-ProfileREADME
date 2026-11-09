@@ -77,20 +77,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   updatePersonal: (data) => {
     set((state) => {
       const next = { ...state, personal: { ...state.personal, ...data } };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(
-            STORAGE_KEY,
-            JSON.stringify({
-              personal: next.personal,
-              techStack: next.techStack,
-              stats: next.stats,
-              socials: next.socials,
-              addons: next.addons,
-            })
-          );
-        } catch {}
-      }
       return next;
     });
   },
@@ -104,11 +90,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   updateTechStack: (data) => {
     set((state) => {
       const next = { ...state, techStack: { ...state.techStack, ...data } };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
       return next;
     });
   },
@@ -123,11 +104,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
         ...state,
         techStack: { ...state.techStack, selectedSkills: updated },
       };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
       return next;
     });
   },
@@ -167,11 +143,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   updateStats: (data) => {
     set((state) => {
       const next = { ...state, stats: { ...state.stats, ...data } };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
       return next;
     });
   },
@@ -179,11 +150,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   updateSocials: (data) => {
     set((state) => {
       const next = { ...state, socials: { ...state.socials, ...data } };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
       return next;
     });
   },
@@ -191,11 +157,6 @@ export const useProfileStore = create<ProfileStore>((set) => ({
   updateAddons: (data) => {
     set((state) => {
       const next = { ...state, addons: { ...state.addons, ...data } };
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-        } catch {}
-      }
       return next;
     });
   },
@@ -232,12 +193,7 @@ export const useProfileStore = create<ProfileStore>((set) => ({
     const preset = TEMPLATE_PRESETS[presetKey];
     if (preset) {
       set({ ...preset.state });
-      if (typeof window !== "undefined") {
-        try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(preset.state));
-        } catch {}
       }
-    }
   },
 
   resetToDefault: () => {
@@ -249,3 +205,16 @@ export const useProfileStore = create<ProfileStore>((set) => ({
     }
   },
 }));
+
+// Persist every change in one place, once saved state has been loaded.
+if (typeof window !== "undefined") {
+  useProfileStore.subscribe(({ hasHydrated, personal, techStack, stats, socials, addons }) => {
+    if (!hasHydrated) return;
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({ personal, techStack, stats, socials, addons })
+      );
+    } catch {}
+  });
+}
