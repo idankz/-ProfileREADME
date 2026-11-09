@@ -10,7 +10,7 @@
 [![Zustand](https://img.shields.io/badge/State-Zustand-orange?style=flat-square)](https://github.com/pmndrs/zustand)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-[Live Demo](http://localhost:3000) · [Report Bug](https://github.com/idankuz/-ProfileREADME/issues) · [Request Feature](https://github.com/idankuz/-ProfileREADME/issues)
+[Report Bug](https://github.com/idankz/-ProfileREADME/issues) · [Request Feature](https://github.com/idankz/-ProfileREADME/issues)
 
 </div>
 
@@ -72,7 +72,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/idankuz/profilereadme-dev.git
+   git clone https://github.com/idankz/-ProfileREADME.git profilereadme-dev
    cd profilereadme-dev
    ```
 
