@@ -287,7 +287,9 @@ export function generateMarkdown(state: ProfileState): string {
       }
     }
 
-    sections.push(statsBlocks.join("\n\n"));
+    if (statsBlocks.length > 1) {
+      sections.push(statsBlocks.join("\n\n"));
+    }
   }
 
   // 4. Social Links & Badges
@@ -489,7 +491,7 @@ export function generateMarkdown(state: ProfileState): string {
   }
 
   // Footer note
-  const footer = `\n---\n<p align="center"><em>Generated with <a href="https://profilereadme.dev">ProfileREADME.dev</a> 🚀</em></p>`;
+  const footer = `\n---\n<p align="center"><em>Generated with <a href="https://github.com/idankz/-ProfileREADME">ProfileREADME.dev</a> 🚀</em></p>`;
 
   return sections.join("\n\n---\n\n") + footer;
 }

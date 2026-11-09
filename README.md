@@ -4,13 +4,13 @@
 
 **A modern, responsive web application for developers to build, customize, and export professional GitHub Profile READMEs with an interactive live preview.**
 
-[![Next.js](https://img.shields.io/badge/Next.js-14.2-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Zustand](https://img.shields.io/badge/State-Zustand-orange?style=flat-square)](https://github.com/pmndrs/zustand)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-[Live Demo](http://localhost:3000) · [Report Bug](https://github.com/idankuz/-ProfileREADME/issues) · [Request Feature](https://github.com/idankuz/-ProfileREADME/issues)
+[Report Bug](https://github.com/idankz/-ProfileREADME/issues) · [Request Feature](https://github.com/idankz/-ProfileREADME/issues)
 
 </div>
 
@@ -36,6 +36,7 @@
   - Profile Views counter badge (`komarev.com`).
 - **Social Media & Developer Badges**:
   - Official branded shields for GitHub, LinkedIn, X/Twitter, Portfolio, Discord, YouTube, Twitch, Dev.to, Medium, and Email.
+  - Stats, top-language and trophy cards are off by default because their shared public services are currently unavailable. The streak card works.
 - **Add-on Blocks**:
   - Daily rotating developer quote widget.
   - Recent blog posts list builder.
@@ -53,7 +54,7 @@
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Next.js 14](https://nextjs.org/) (App Router)
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **State Management**: [Zustand](https://github.com/pmndrs/zustand) with post-mount SSR hydration safety and `localStorage` persistence
@@ -72,7 +73,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/idankuz/profilereadme-dev.git
+   git clone https://github.com/idankz/-ProfileREADME.git profilereadme-dev
    cd profilereadme-dev
    ```
 
